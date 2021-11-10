@@ -1,14 +1,14 @@
 import React from "react"
 import {Route, Switch, withRouter} from "react-router-dom";
 
-import {HomeView} from "../views";
+import {HomePage} from "../pages";
 
 
 const App: React.FunctionComponent = () => {
     return (
         <>
             <Switch>
-                <Route path="/" component={HomeView}/>
+                <Route path="/" component={HomePage}/>
             </Switch>
         </>
     )
