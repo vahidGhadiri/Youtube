@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 # Youtube
-Typescript/ Redux-sage/ Styled-component
+Typescript/ Redux-saga/ Styled-component
 =======
 # Getting Started with Create React AppRoute
 
