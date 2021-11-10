@@ -4,6 +4,12 @@ import {RootReducer} from "../reducers";
 import RootSaga from "../sagas";
 
 
+declare global {
+    interface Window {
+        __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+    }
+}
+
 const enhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const sagaMiddleware = createSagaMiddleware()
