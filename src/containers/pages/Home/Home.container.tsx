@@ -1,5 +1,5 @@
 import React, {Dispatch} from "react"
-import {HomePage} from "../../../pages";
+import {HomePresentation} from "../../../presentations";
 import {InitialStateInterface} from "../../../config/interfaces.config";
 import {fetchVideos} from "../../../redux/actions/videos.action";
 import {connect} from "react-redux";
@@ -15,7 +15,7 @@ class HomeContainer extends React.Component<any, any> {
     }
 
     render() {
-        return <HomePage data={this.props.videos} onDownload={this.onDownload}/>
+        return <HomePresentation data={this.props.videos} onDownload={this.onDownload}/>
     }
 }
 
