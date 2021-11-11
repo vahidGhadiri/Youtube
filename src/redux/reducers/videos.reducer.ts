@@ -1,18 +1,19 @@
-import {IAction, IState} from "../../config/interfaces.config";
+import {InitialStateInterface, VideosActionInterface} from "../../config/interfaces.config";
 import {VIDEOS} from "../../config/types.config";
 
-const initialState: IState = {
+const initialState: InitialStateInterface = {
     videos: [],
     isLoading: false,
     error: null
 }
 
-export const videoReducer = (state = initialState, action: IAction): IState => {
+
+export const videoReducer = (state = initialState, action: VideosActionInterface): InitialStateInterface => {
     switch (action.type) {
         case VIDEOS.FETCH_VIDEOS:
             return {...state, isLoading: true}
         case VIDEOS.FETCH_VIDEOS_SUCCESSFUL:
-            return {...state, videos: [...state.videos, action.data]}
+            return {...state, videos: action.data, isLoading: false}
         case  VIDEOS.FETCH_VIDEOS_FAILURE:
             return {...state, error: action.data}
         default:
