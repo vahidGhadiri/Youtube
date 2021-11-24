@@ -1,6 +1,6 @@
 import React from "react"
 import {Route, Switch, withRouter} from "react-router-dom";
-import HomeContainer from "../containers/Home/Home.container";
+import HomeContainer from "../containers/pages/Home/Home.container";
 
 
 const App: React.FunctionComponent = () => {

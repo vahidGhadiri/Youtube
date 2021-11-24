@@ -1,21 +1,21 @@
 import React, {Dispatch} from "react"
-import {HomePresentation} from "../../../presentations";
+import {HomePresentation} from "../../../pages";
 import {InitialStateInterface} from "../../../config/interfaces.config";
 import {fetchVideos} from "../../../redux/actions/videos.action";
 import {connect} from "react-redux";
 
 class HomeContainer extends React.Component<any, any> {
-
     componentDidMount() {
         this.props.fetchVideos()
     }
 
-    onDownload = (vahid: string): void => {
-        console.log(vahid)
+    onDownload = (id: number): void => {
+        console.log(id)
     }
 
+
     render() {
-        return <HomePresentation data={this.props.videos} onDownload={this.onDownload}/>
+        return <HomePresentation onDownload={(id) => this.onDownload(id)}/>
     }
 }
 
