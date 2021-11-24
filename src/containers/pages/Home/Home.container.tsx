@@ -4,20 +4,37 @@ import {InitialStateInterface} from "../../../config/interfaces.config";
 import {fetchVideos} from "../../../redux/actions/videos.action";
 import {connect} from "react-redux";
 
-class HomeContainer extends React.Component<any, any> {
+
+interface getIdInterface {
+    (id: number): void
+}
+
+interface getValueInterface {
+    (value: string): void
+}
+
+export interface HomeProps {
+    onGetId: getIdInterface;
+    onGetValue: getValueInterface
+}
+
+
+class HomeContainer extends React.Component<any> {
     componentDidMount() {
         this.props.fetchVideos()
     }
 
-    onDownload = (id: number): void => {
-        console.log(id)
-    }
-
+    getId: getIdInterface = (id) => console.log(id)
+    getValue: getValueInterface = (value) => console.log(value)
 
     render() {
-        return <HomePresentation onDownload={(id) => this.onDownload(id)}/>
+        return <HomePresentation
+            onGetId={(id) => this.getId(id)}
+            onGetValue={(value => this.getValue(value))}/>
     }
 }
+
+
 
 const mapStateToProps = (state: InitialStateInterface) => ({
     videos: state.videos

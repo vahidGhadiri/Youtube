@@ -1,16 +1,14 @@
 import React from "react"
 import {SidebarPresentation} from "../../components";
+import {HomeProps} from "../../containers/pages/Home/Home.container";
 
 
-interface Props {
-    onDownload(id: number): void
-}
-
-const HomePresentation: React.FunctionComponent<Props> = ({onDownload}) => {
+const HomePresentation: React.FunctionComponent<HomeProps> = ({onGetId, onGetValue}) => {
     return (
         <div data-test="home-component">
             <h1>Youtube Home page</h1>
-            <button onClick={() => onDownload(1)}>Sample</button>
+            <button onClick={() => onGetId(1)}>id</button>
+            <button onClick={() => onGetValue("vahid")}>value</button>
             <SidebarPresentation/>
         </div>
     )
