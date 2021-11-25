@@ -1,10 +1,27 @@
 import React from "react"
-import {Container} from "./Header.style";
+import {
+    Container,
+    GridIcon,
+    IconContainer,
+    Input,
+    MicrophoneIcon,
+    NotificationIcon,
+    PlusIcon,
+    SearchContainer
+} from "./Header.style";
 
 export const HeaderPresentation = () => {
     return (
         <Container>
-            Header
+            <SearchContainer>
+                <MicrophoneIcon/>
+                <Input type="text" placeholder="Type to search"/>
+            </SearchContainer>
+            <IconContainer>
+                <PlusIcon/>
+                <GridIcon/>
+                <NotificationIcon/>
+            </IconContainer>
         </Container>
     )
 }
