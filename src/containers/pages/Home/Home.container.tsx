@@ -8,15 +8,10 @@ import {connect} from "react-redux";
 interface getIdInterface {
     (id: number): void
 }
-
-interface getValueInterface {
-    (value: string): void
-}
-
 export interface HomeProps {
     onGetId: getIdInterface;
-    onGetValue: getValueInterface
 }
+
 
 
 class HomeContainer extends React.Component<any> {
@@ -25,12 +20,9 @@ class HomeContainer extends React.Component<any> {
     }
 
     getId: getIdInterface = (id) => console.log(id)
-    getValue: getValueInterface = (value) => console.log(value)
 
     render() {
-        return <HomePresentation
-            onGetId={(id) => this.getId(id)}
-            onGetValue={(value => this.getValue(value))}/>
+        return <HomePresentation onGetId={(id) => this.getId(id)}/>
     }
 }
 
