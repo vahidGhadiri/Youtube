@@ -81,3 +81,9 @@ export interface VideosListResponseInterface {
     nextPageToken: string
     pageInfo: { totalResults: number, resultsPerPage: number }
 }
+
+export interface SidebarInterface {
+    name: string,
+    icon: string,
+    route: string
+}

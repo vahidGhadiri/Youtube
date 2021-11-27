@@ -12,7 +12,6 @@ const HomePresentation: React.FunctionComponent<HomeProps> = ({onGetId}) => {
             <SidebarPresentation/>
             <Main>
                 <HeaderPresentation/>
-                Main Content will render here
             </Main>
 
         </Layout>
