@@ -40,6 +40,11 @@ export const IconContainer = styled.div`
   align-items: center;
   color: ${COLORS.SECONDARY_TEXT};
   font-size: 2.2rem;
+
+  svg:hover {
+    color: #fff;
+    transition: all .5s ease;
+  }
 `
 
 export const MicrophoneIcon = styled(BiMicrophone)`
