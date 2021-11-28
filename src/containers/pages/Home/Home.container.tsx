@@ -9,10 +9,8 @@ interface getIdInterface {
     (id: number): void
 }
 export interface HomeProps {
-    onGetId: getIdInterface;
+    onGetId?: getIdInterface;
 }
-
-
 
 class HomeContainer extends React.Component<any> {
     componentDidMount() {

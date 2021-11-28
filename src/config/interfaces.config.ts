@@ -84,6 +84,10 @@ export interface VideosListResponseInterface {
 
 export interface SidebarInterface {
     name: string,
-    icon: string,
+    icon: any,
     route: string
+}
+
+export interface MapperInterface {
+    data: SidebarInterface
 }
