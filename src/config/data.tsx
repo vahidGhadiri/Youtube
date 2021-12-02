@@ -9,7 +9,7 @@ import {
     MdPlayCircleOutline
 } from "react-icons/md";
 
-import {AiOutlineInfoCircle, AiOutlineSetting} from "react-icons/ai"
+import {AiOutlineSetting,AiOutlineInfoCircle} from "react-icons/ai"
 
 export const SIDEBAR_PRIMARY: SidebarInterface[] = [
     {name: "Explore", icon: <MdExplore/>, route: ""},
@@ -32,6 +32,11 @@ export const SIDEBAR_SUBSCRIPTION: SidebarInterface[] = [
         route: ""
     },
     {
+        name: "Elif",
+        image: "https://yt3.ggpht.com/oLG6NXyEXjtEoCqmVmPkqgDNfcNhdFcFy8GaA_c9K-hZorx-7AvWdK0rO8jsLsSQ2EJ9ChHx=s88-c-k-c0x00ffffff-no-rj",
+        route: ""
+    },
+    {
         name: "Kennt C. Dodds",
         image: "https://yt3.ggpht.com/ytc/AKedOLTiR5QXiYQX_IKKYf853C5pEgKFMYh44jpwVpVk_Q=s88-c-k-c0x00ffffff-no-rj",
         route: ""
@@ -41,11 +46,6 @@ export const SIDEBAR_SUBSCRIPTION: SidebarInterface[] = [
         image: "https://yt3.ggpht.com/ytc/AKedOLQxAwqb9EEBNw_KIGmGWJOOZ8XR7B-xhBC0ciA=s88-c-k-c0x00ffffff-no-rj",
         route: ""
     },
-    {
-        name: "ElifMusic",
-        image: "https://yt3.ggpht.com/oLG6NXyEXjtEoCqmVmPkqgDNfcNhdFcFy8GaA_c9K-hZorx-7AvWdK0rO8jsLsSQ2EJ9ChHx=s88-c-k-c0x00ffffff-no-rj",
-        route: ""
-    }
 ]
 
 export const SIDEBAR_MORE: SidebarInterface[] = [
