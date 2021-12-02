@@ -5,11 +5,12 @@ import {fetchVideos} from "../../../redux/actions/videos.action";
 import {connect} from "react-redux";
 
 
-interface getIdInterface {
-    (id: number): void
+interface OnGetIdInterface {
+    (id: number): void,
 }
+
 export interface HomeProps {
-    onGetId?: getIdInterface;
+    onGetId?: OnGetIdInterface;
 }
 
 class HomeContainer extends React.Component<any> {
@@ -17,10 +18,12 @@ class HomeContainer extends React.Component<any> {
         this.props.fetchVideos()
     }
 
-    getId: getIdInterface = (id) => console.log(id)
+    onGetId = (id: number) => {
+        console.log(`vahid-${id}`)
+    }
 
     render() {
-        return <HomePresentation onGetId={(id) => this.getId(id)}/>
+        return <HomePresentation onGetId={(id) => this.onGetId(id)}/>
     }
 }
 

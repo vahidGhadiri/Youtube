@@ -77,14 +77,15 @@ export interface VideosListItemInterface {
 export interface VideosListResponseInterface {
     etag: string
     kind: string
-    items: VideosListItemInterface[],
+    items: VideosListItemInterface[]
     nextPageToken: string
     pageInfo: { totalResults: number, resultsPerPage: number }
 }
 
 export interface SidebarInterface {
-    name: string,
-    icon: any,
+    name: string
+    icon?: any
+    image?: string
     route: string
 }
 
